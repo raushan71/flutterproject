@@ -24,7 +24,7 @@ jobs:
         env:
           KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
         run: |
-          echo "$KEYSTORE_BASE64" | base64 -d > android/my-release-key.jks
+          echo "$KEYSTORE_BASE64" | base64 -d > android/key.jks
 
       - name: Create key.properties File
         run: |
